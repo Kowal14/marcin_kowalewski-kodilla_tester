@@ -32,12 +32,12 @@ public class Notebook {
     }
 
     public void checkProfitability() {
-        if (this.year < 2011 && this.price < 110) {
+        if (this.year <= 2011 && this.price <= 110) {
             System.out.println("this notebook is ok");
-        } else if (this.year > 2017 && this.price > 490) {
+        } else if (this.year > 2016 && this.price > 490) {
             System.out.println("This notebook is profitable");
         }
-        if (this.year > 2014 && this.year < 2016 && this.price > 290 && this.price < 310) {
+        if (this.year > 2011 && this.year <= 2016 && this.price > 110 && this.price <= 490) {
             System.out.println("this notebook is very profitable");
         }
     }
