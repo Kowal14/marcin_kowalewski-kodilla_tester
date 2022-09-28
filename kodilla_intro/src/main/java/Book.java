@@ -6,11 +6,12 @@ public class Book {
         this.author = author;
         this.title = title;
 
-        Book book = new Book("Isaac Asimov", "The Galaxy");
-        System.out.println(book.author + book.title);
+
+
 
     }
 public static Book Of(String author, String title) {
+    Book book = new Book( author, title);
     return Book.Of(author, title);
     }
 }
