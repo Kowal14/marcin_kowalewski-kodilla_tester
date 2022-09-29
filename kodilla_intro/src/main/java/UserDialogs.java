@@ -1,14 +1,20 @@
 import java.util.Scanner;
+
 public class UserDialogs {
-    public static String getUsername() {
-        Scanner scanner = new Scanner(System.in);                 // [1]
-        while (true) {                                            // [2]
-            System.out.println("Enter your name:");                // [3]
-            String name = scanner.nextLine().trim();               // [4]
-            if (name.length() >= 2) {                              // [5]
-                return name;                                        // [6]
+    public static String pickAcolor() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Write first letter of your favourite color (B-black, G-green, P-purple, W-white):");
+            String color = scanner.nextLine().trim().toUpperCase();
+            switch (color) {
+                case "B" : return "BLACK";
+                case "G" : return "GREEN";
+                case "P" : return "PURPLE";
+                case "W" : return "WHITE";
+                default:
+                    System.out.println("Wrong color. Try again.");
             }
-            System.out.println("Name is too short. Try again.");
         }
+
     }
 }
