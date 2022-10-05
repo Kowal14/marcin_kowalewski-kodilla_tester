@@ -23,4 +23,10 @@ public class RandomNumbers {
         }
         return result;
     }
+    public int getMax() {
+        return max;
+    }
+    public int getMin() {
+        return min;
+    }
 }

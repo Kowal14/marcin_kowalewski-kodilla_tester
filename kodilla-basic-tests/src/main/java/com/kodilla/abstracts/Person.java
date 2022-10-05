@@ -5,16 +5,17 @@ public class Person {
     String firstName;
     int age;
     String job;
-    private Mechanic mechanic;
+
 
     public Person(String firstName, int age, String job, Mechanic mechanic) {
         this.firstName = firstName;
         this.age = age;
         this.job = job;
-        this.mechanic = mechanic;
+
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
+        Mechanic mechanic = new Mechanic(1000, "repairCar");
 
         System.out.println(mechanic.responsibilities);
     }
