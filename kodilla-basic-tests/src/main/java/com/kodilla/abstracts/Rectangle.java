@@ -6,13 +6,13 @@ public class Rectangle extends Shape{
     }
     @Override
     public void getArea() {
-    int area;
-    area = a*b;
-    System.out.println(area);
+        int area;
+        area = a*b;
+        System.out.println(area);
     }
     @Override
-    public void getPerimeter() {
-    int perimeter;
-    perimeter = 2*a + 2*b;
-    System.out.println(perimeter);}
+        public void getPerimeter() {
+        int perimeter;
+        perimeter = 2*a + 2*b;
+        System.out.println(perimeter);}
 }

@@ -13,7 +13,7 @@ public class Triangle extends Shape {
     }
     @Override
     public void getPerimeter() {
-    int perimeter;
-    perimeter = a+b+c;
-    System.out.println(perimeter);}
+        int perimeter;
+        perimeter = a+b+c;
+        System.out.println(perimeter);}
 }
