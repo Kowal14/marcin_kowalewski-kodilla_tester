@@ -3,16 +3,16 @@ package com.kodilla.abstracts;
 public class Application2 {
     public static void main(String[] args) {
 
-        Square1 square1 = new Square1(5);
-        square1.getArea();
-        square1.getPerimeter();
+        Triangle triangle = new Triangle(3, 4, 5, 4);
+        triangle.getArea();
+        triangle.getPerimeter();
 
-        Square2 square2 = new Square2(10);
-        square2.getArea();
-        square2.getPerimeter();
+        Rectangle rectangle = new Rectangle(4, 6);
+        rectangle.getArea();
+        rectangle.getPerimeter();
 
-        Square3 square3 = new Square3(15);
-        square3.getArea();
-        square3.getPerimeter();
+        Square square = new Square(5);
+        square.getArea();
+        square.getPerimeter();
     }
 }
