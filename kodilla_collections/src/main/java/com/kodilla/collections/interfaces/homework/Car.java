@@ -4,9 +4,9 @@ public interface Car {
 
     int getSpeed();
 
-    int increaseSpeed();
+    void increaseSpeed();
 
-    int decreaseSpeed();
+    void decreaseSpeed();
 
 
 }
