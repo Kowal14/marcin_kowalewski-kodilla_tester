@@ -1,5 +1,7 @@
 package com.kodilla.collections.interfaces;
 
+import com.kodilla.collections.interfaces.Shape;
+
 public class Square implements Shape {
     private double width;
 
