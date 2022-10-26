@@ -5,7 +5,7 @@ public class Bank {
 
     public Bank() {
 
-        this.cashMachines = new CashMachine[2];
+        this.cashMachines = new CashMachine[0];
     }
 
     public int getTotalBalance() {
@@ -49,6 +49,9 @@ public class Bank {
                 sum = sum + cashMachines[i].getAverageOfIncomes();
             }
         }
+        if (sum == 0)
+            return 0;
+
         return sum / this.getTotalNumberOfIncomes();
 
     }
