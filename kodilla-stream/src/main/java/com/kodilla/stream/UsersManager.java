@@ -26,13 +26,13 @@ import java.util.stream.Collectors;
     }
 
     private static List<String> usersOlderThan40(int age) {
-        List<String> usernames = UsersRepository.getUsersList()
+        List<String> User = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> (user.getAge() > age))
                 .map(UsersManager::getUserName)
                 .collect(Collectors.toList());
 
-        return usernames;
+        return User;
     }
 
     private static List<String> postedMoreThan5Posts(int number) {

@@ -25,12 +25,12 @@ public class UsersManagerTest {
     @Test
     public void testUsersOlderThan40() {
         int age = 40;
-        List<String> usernames = UsersRepository.getUsersList()
+        List<String> User = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> (user.getAge() > age))
                 .map(UsersManager::getUserName)
                 .collect(Collectors.toList());
-        assertEquals(4, usernames.size());
+        assertEquals(4, User.size());
     }
 
     @Test
