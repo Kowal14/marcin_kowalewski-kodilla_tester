@@ -14,33 +14,29 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UsersManagerTest {
     @Test
     public void testFilterChemistGroupUsernames() {
-        List<String> usernames = UsersRepository.getUsersList()
-                .stream()
-                .filter(user -> user.getGroup().equals("Chemists"))
-                .map(UsersManager::getUserName)
-                .collect(Collectors.toList());
-        assertEquals(2, usernames.size());
+        List<String> users = UsersManager.filterChemistGroupUsernames();
+        assertEquals(2, users.size());
+        assertTrue(users.contains("Walter White"));
+        assertTrue(users.contains("Gale Boetticher"));
+
+
     }
 
     @Test
     public void testUsersOlderThan40() {
         int age = 40;
-        List<String> User = UsersRepository.getUsersList()
-                .stream()
-                .filter(user -> (user.getAge() > age))
-                .map(UsersManager::getUserName)
-                .collect(Collectors.toList());
-        assertEquals(4, User.size());
+        List<User> users = UsersManager.usersOlderThan40(40);
+        for (User user : users) {
+            assertTrue(user.getAge() > 40);
+        }
+
+
     }
 
     @Test
     public void testPostedMoreThan5Posts() {
         int number = 5;
-        List<String> usernames = UsersRepository.getUsersList()
-                .stream()
-                .filter(user -> (user.getNumberOfPost() > number))
-                .map(UsersManager::getUserName)
-                .collect(Collectors.toList());
-        assertEquals(3, usernames.size());
+        List<String> users = UsersManager.postedMoreThan5Posts(5);
+        assertEquals(3, users.size());
     }
 }

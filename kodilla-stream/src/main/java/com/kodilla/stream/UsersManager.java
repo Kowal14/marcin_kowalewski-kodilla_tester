@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
         public static void main(String[] args) {
             List<String> chemistGroupUsernames = filterChemistGroupUsernames();
             int age = 40;
-            List<String> usersOlderThan40 = usersOlderThan40(age);
+            List<User> usersOlderThan40 = usersOlderThan40(age);
             int number = 5;
             List<String> postedMoreThan5Posts = postedMoreThan5Posts(number);
             System.out.println(chemistGroupUsernames);
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
             System.out.println(postedMoreThan5Posts);
         }
 
-    private static List<String> filterChemistGroupUsernames() {
+    public static List<String> filterChemistGroupUsernames() {
         List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getGroup().equals("Chemists"))
@@ -25,17 +25,16 @@ import java.util.stream.Collectors;
         return usernames;
     }
 
-    private static List<String> usersOlderThan40(int age) {
-        List<String> User = UsersRepository.getUsersList()
+    public static List<User> usersOlderThan40(int age) {
+        List<User> users = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> (user.getAge() > age))
-                .map(UsersManager::getUserName)
                 .collect(Collectors.toList());
 
-        return User;
+        return users;
     }
 
-    private static List<String> postedMoreThan5Posts(int number) {
+    public static List<String> postedMoreThan5Posts(int number) {
         List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> (user.getNumberOfPost() > number))
