@@ -9,7 +9,5 @@ public class ForumStats {
     void testAvgPostOlder() {
 
 
-
-
     }
 }
