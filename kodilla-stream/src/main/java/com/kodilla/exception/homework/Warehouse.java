@@ -8,7 +8,9 @@ import java.util.List;
 public class Warehouse {
     public static void main(String[] args) {
         getOrder();
+
     }
+
     public static List<Order> getOrdersList() {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("321"));
