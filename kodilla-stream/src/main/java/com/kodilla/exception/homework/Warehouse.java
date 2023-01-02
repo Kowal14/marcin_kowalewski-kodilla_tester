@@ -17,7 +17,7 @@ public class Warehouse {
         return orders;
     }
 
-    public static Order getOrder() {
+    public static void getOrder() {
         Warehouse.getOrdersList()
                 .stream()
                 .map(order -> order.getOrderNumber())

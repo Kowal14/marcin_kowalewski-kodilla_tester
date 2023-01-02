@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ForumStats {
     @Test
-    double testAvgPostOlder() {
+    void testAvgPostOlder() {
 
 
 
