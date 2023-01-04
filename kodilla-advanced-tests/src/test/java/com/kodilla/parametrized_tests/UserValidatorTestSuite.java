@@ -21,7 +21,7 @@ public class UserValidatorTestSuite {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"abc12221kfgjfk", "0", "kowal1014"})
+    @ValueSource(strings = {"abc12221kfgjfk", "7", "kowal1014"})
     public void isEmailValidate(String email) {
         boolean result = userValidator.validateEmail(email);
         assertFalse(result);
