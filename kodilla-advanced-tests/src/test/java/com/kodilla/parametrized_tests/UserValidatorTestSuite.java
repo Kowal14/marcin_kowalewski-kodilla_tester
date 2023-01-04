@@ -14,7 +14,7 @@ public class UserValidatorTestSuite {
 
 
     @ParameterizedTest
-    @ValueSource(strings = {"kowal1014", "a1", "Magda1212"})
+    @ValueSource(strings = {"kowal1014", "aa1", "Magda1212"})
     public void isUsernameValidate(String username) {
         boolean result = userValidator.validateUsername(username);
         assertTrue(result);
