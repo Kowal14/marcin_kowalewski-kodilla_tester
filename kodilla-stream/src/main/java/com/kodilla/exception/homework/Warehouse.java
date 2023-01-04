@@ -6,23 +6,22 @@ import java.util.List;
 
 
 public class Warehouse {
-    public static void main(String[] args) {
-        getOrder();
+    private List<Order> orders = new ArrayList<>();
+
+    public void addOrder(Order order) {
+        orders.add(order);
+    }
+
+    public String getOrder(String order) throws OrderDoesntExistsException {
+        String orderNumber = orders.stream()
+                .filter(order1 -> order1.getOrderNumber().equals(order))
+                .map(order1 -> order1.getOrderNumber())
+                .findFirst()
+                .orElseThrow(() -> new OrderDoesntExistsException());
+        return orderNumber;
+    }
+
+
 
     }
 
-    public static List<Order> getOrdersList() {
-        List<Order> orders = new ArrayList<>();
-        orders.add(new Order("321"));
-        orders.add(new Order("111"));
-        orders.add(new Order("100"));
-        return orders;
-    }
-
-    public static void getOrder() {
-        Warehouse.getOrdersList()
-                .stream()
-                .map(order -> order.getOrderNumber())
-                .forEach(number -> System.out.println(number));
-    }
-}
