@@ -7,26 +7,12 @@ import java.util.List;
 
 public class ForumStats {
     public static void main(String[] args) {
-        int age = 40;
-        double avgPostOlder = UsersRepository.getUsersList()
-
-                .stream()
-                .filter(user -> (user.getAge() >= age))
-                .mapToInt(n -> n.getNumberOfPost())
-                .average()
-                .getAsDouble();
+    double avgPostOlder = getAverageOfOlder(UsersRepository.getUsersList());
+    double avgPostYounger = getAverageOfYounger(UsersRepository.getUsersList());
         System.out.println(avgPostOlder);
-
-        double avgPostYounger = UsersRepository.getUsersList()
-
-                .stream()
-                .filter(user -> (user.getAge() < age))
-                .mapToInt(n -> n.getNumberOfPost())
-                .average()
-                .getAsDouble();
         System.out.println(avgPostYounger);
     }
-    public double getAverageOfOlder(List<User> users) {
+    public static double getAverageOfOlder(List<User> users) {
         double avgPostOlder = users
 
                 .stream()
@@ -38,7 +24,7 @@ public class ForumStats {
 
 
     }
-    public double getAverageOfYounger(List<User> users) {
+    public static double getAverageOfYounger(List<User> users) {
         double avgPostYounger = users
                 .stream()
                 .filter(user -> (user.getAge() < 40))

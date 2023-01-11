@@ -19,6 +19,8 @@ public class ShopTestSuite {
         assertEquals(3, numberOfOrders);
     }
 
+
+
     @BeforeEach
     public void initializeShop() {
         shop.addOrder(one);
