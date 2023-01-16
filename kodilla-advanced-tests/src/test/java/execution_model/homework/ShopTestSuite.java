@@ -1,6 +1,9 @@
 package execution_model.homework;
 import org.junit.jupiter.api.*;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -8,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class ShopTestSuite {
 
     Shop shop = new Shop();
-    Order one = new Order(111, 1000, 01.01, "Marcin");
-    Order two = new Order(222, 2000, 02.01, "Kasia");
-    Order three = new Order(333, 3000, 03.01, "Mateusz");
+    Order one = new Order(111, 1000, LocalDate.of(2023,Month.JANUARY,1), "Marcin");
+    Order two = new Order(222, 2000, LocalDate.of(2023, Month.JANUARY, 3), "Kasia");
+    Order three = new Order(333, 3000, LocalDate.of(2023,Month.JANUARY, 5), "Mateusz");
 
     @Test
     public void shouldAddOrderstoShop() {
