@@ -1,12 +1,16 @@
 package com.kodilla.parametrized_tests;
 
+import com.kodilla.parametrized_tests.homework.GamblingMachine;
+import com.kodilla.parametrized_tests.homework.InvalidNumbersException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Set;
 
 public class GamblingMachineTestSuite {
-    @ParameterizedTest
-    @CsvFileSource(resources = "/numbers.csv",lineSeparator = ";")
-    public void shouldValidateNumbers() {}
+
+    GamblingMachine machine = new GamblingMachine();
+
+
 }
