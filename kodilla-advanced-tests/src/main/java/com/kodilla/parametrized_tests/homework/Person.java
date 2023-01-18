@@ -1,8 +1,11 @@
 package com.kodilla.parametrized_tests.homework;
 
+import java.util.Objects;
+
 public class Person {
     private double heightInMeters;
     private double weightInKilogram;
+
 
     public Person(double heightInMeters, double weightInKilogram) {
         this.heightInMeters = heightInMeters;
